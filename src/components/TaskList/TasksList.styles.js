@@ -27,4 +27,7 @@ export const TasksWrapperText = styled.span`
   font-size: 24px;
   color: ${Color.smokyWhite};
   font-weight: 400;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
 `;

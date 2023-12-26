@@ -3,5 +3,5 @@ import styled from "styled-components";
 export const MainWrapper = styled.div`
     display: flex;
     justify-content: center;
-    margin-top: 75px;
+    margin-top: 55px;
 `;
