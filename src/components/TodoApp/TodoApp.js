@@ -13,6 +13,7 @@ import {
 import {TasksList} from "../TaskList/TasksList";
 import {useTaskMutations} from "../../hooks/useTaskMutations";
 import {TaskText} from "../Task/Task.styles";
+import {TaskAlert} from "../TaskAlert/TaskAlert";
 
 export const TodoApp = () => {
     const [modalOpen, setModalOpen] = useState(false);
@@ -44,10 +45,6 @@ export const TodoApp = () => {
         closeModal();
     };
 
-    const handleDeleteTask = (taskId) => {
-        deleteTaskMutation.mutate(taskId);
-    };
-
     const handleUpdateTask = (task) => {
         openModal(task);
     };
@@ -74,18 +71,19 @@ export const TodoApp = () => {
             <TasksList tasks={tasks.data} onDelete={confirmDelete} onUpdate={handleUpdateTask}/>
 
             {modalOpen && (
-                <TaskModal
-                    close={closeModal}
+                <TaskAlert
+                    modalOpen={modalOpen}
                     onSave={(title) => {
                         if (selectedTask) {
-                            updateTaskMutation.mutate({id: selectedTask.id, title});
+                            updateTaskMutation.mutate({ id: selectedTask.id, title });
                         } else {
-                            handleAddTask({title});
+                            handleAddTask({ title });
                         }
                     }}
-                    onCancel={closeModal}
+                    closeModal={closeModal} // Передаем функцию closeModal
                 />
             )}
+
             {showDeleteConfirmation && (
                 <DeleteConfirmBack>
                     <DeleteConfirm>
