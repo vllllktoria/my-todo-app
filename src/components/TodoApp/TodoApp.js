@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {TaskModal} from "../TaskModal/TaskModal";
 import {useQuery} from "react-query";
 import {
     AddButton,
@@ -12,7 +11,6 @@ import {
 } from "./TodoApp.styles";
 import {TasksList} from "../TaskList/TasksList";
 import {useTaskMutations} from "../../hooks/useTaskMutations";
-import {TaskText} from "../Task/Task.styles";
 import {TaskAlert} from "../TaskAlert/TaskAlert";
 
 export const TodoApp = () => {
@@ -80,7 +78,7 @@ export const TodoApp = () => {
                             handleAddTask({ title });
                         }
                     }}
-                    closeModal={closeModal} // Передаем функцию closeModal
+                    closeModal={closeModal}
                 />
             )}
 
