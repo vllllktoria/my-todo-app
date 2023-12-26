@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Backdrop, Input, ModalButton, ModalWrapper} from "./TaskModal.styles";
 
 export const TaskModal = ({ close, children }) => {
