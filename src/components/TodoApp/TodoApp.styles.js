@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color } from "../../constants/Colors";
+import {Color} from "../../constants/Colors";
 
 export const Wrapper = styled.div`
   position: relative;
@@ -53,4 +53,51 @@ export const AddButton = styled.button`
   font-weight: 800;
   line-height: 90%;
 
+`;
+
+export const DeleteConfirm = styled.div`
+  height: 30%;
+  width: 30%;
+  background-color: ${Color.nightBlue};
+  border: 1px solid white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+`;
+
+export const ConfirmText = styled.span`
+  padding-left: 10px;
+  color: ${Color.smokyWhite};
+  font-weight: 400;
+  font-size: 20px;
+`;
+
+export const ConfirmButton = styled.button`
+  background-color: ${Color.blue};
+  width: 168px;
+  height: 31px;
+  padding: 6px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: ${Color.smokyWhite};
+  font-weight: 800;
+  line-height: 90%;
+`;
+
+export const DeleteConfirmBack = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
