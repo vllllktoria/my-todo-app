@@ -4,10 +4,15 @@ import {Color} from "../../constants/Colors";
 export const TasksListWrapper = styled.ul`
   list-style: none;
   padding: 0;
+  @media only screen and (max-width: 990px){
+    padding: 10px;
+  }
 `;
 
 export const TasksPanelWrapper = styled.div`
-    
+  @media only screen and (max-width: 990px){
+    width: 100%;
+  }
 `;
 
 export const Search = styled.input`
@@ -21,6 +26,9 @@ export const Search = styled.input`
   text-align: center;
   font-size: 20px;
   font-weight: 400;
+  @media only screen and (max-width: 990px){
+    width: 100%;
+  }
 `;
 
 export const TasksWrapperText = styled.span`
@@ -30,4 +38,7 @@ export const TasksWrapperText = styled.span`
   display: flex;
   justify-content: center;
   margin-top: 100px;
+  @media only screen and (max-width: 990px){
+    font-size: 20px;
+  }
 `;

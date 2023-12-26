@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Color} from "../../constants/Colors";
+import { Color } from "../../constants/Colors";
 
 export const Wrapper = styled.div`
   position: relative;
@@ -14,6 +14,13 @@ export const Wrapper = styled.div`
   min-height: 518px;
   background: ${Color.darkBlue};
   padding-bottom: 50px;
+
+  @media only screen and (max-width: 990px) {
+    width: 90%;
+    padding: 20px;
+    height: 70%;
+    display: flex;
+  }
 `;
 
 export const Title = styled.h1`
@@ -22,6 +29,10 @@ export const Title = styled.h1`
   font-size: 32px;
   font-weight: 800;
   line-height: 90%;
+
+  @media only screen and (max-width: 990px) {
+    font-size: 24px;
+  }
 `;
 
 export const AddButton = styled.button`
@@ -41,4 +52,5 @@ export const AddButton = styled.button`
   color: ${Color.smokyWhite};
   font-weight: 800;
   line-height: 90%;
+
 `;

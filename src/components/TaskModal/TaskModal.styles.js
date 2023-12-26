@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Color} from "../../constants/Colors";
+import { Color } from "../../constants/Colors";
 
 export const Backdrop = styled.div`
   position: fixed;
@@ -24,7 +24,13 @@ export const ModalWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+
+  @media (max-width: 900px) {
+    width: 90%;
+    height: 50%;
+    gap: 30px;
+  }
 `;
 
 export const Input = styled.input`
@@ -34,10 +40,13 @@ export const Input = styled.input`
   border: none;
   outline: none;
   background-color: ${Color.smokyWhite};
-
   text-align: center;
   font-size: 20px;
   font-weight: 400;
+
+  @media only screen and (max-width: 990px) {
+    width: 70%;
+  }
 `;
 
 export const ModalButton = styled.button`
@@ -49,9 +58,13 @@ export const ModalButton = styled.button`
   border: none;
   outline: none;
   cursor: pointer;
-  margin-top: 140px;
-
+  margin-top: 20px;
   color: ${Color.smokyWhite};
   font-weight: 800;
   line-height: 90%;
+
+  @media only screen and (max-width: 990px) {
+    width: 20%;
+    margin-top: 20px;
+  }
 `;
